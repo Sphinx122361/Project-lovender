@@ -5,7 +5,7 @@ const SESSION_KEY = "lavenderCurrentUser";
 const NOTIFICATIONS_KEY = "lavenderNotifications";
 
 const DB_NAME = "ProjectLavenderDB";
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
