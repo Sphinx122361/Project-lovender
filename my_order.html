@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E6E0F8">
+
+    <title>Project Lavender - My Orders</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <a class="brand" href="my_order.html">
+            <img src="flower lugo for user.png" alt="Project Lavender logo">
+            <span>
+                <small>PROJECT</small>
+                <strong>LAVENDER</strong>
+            </span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Main navigation">
+
+            <a href="my_order.html">
+                <img src="home icon_2.png" alt="">
+                Home
+            </a>
+
+            <a href="new_order.html">
+                <img src="plus sign icon_2.png" alt="">
+                New Order
+            </a>
+
+            <a href="my_order.html" class="active" aria-current="page">
+                <img src="Notes icon_2.png" alt="">
+                My Orders
+            </a>
+
+            <a href="order_status.html">
+                <img src="ordering time icon_2.png" alt="">
+                Order Status
+            </a>
+
+            <a href="profile.html">
+                <img src="Profile icon_2.png" alt="">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="student-account">
+            <span class="student-avatar">S</span>
+
+            <span>
+                <strong id="studentName">Student</strong>
+                <small>Student Account</small>
+            </span>
+        </div>
+
+    </aside>
+
+    <main class="main-area">
+
+        <header class="topbar">
+
+            <p>
+                <a href="my_order.html">Home</a>
+                <span>›</span>
+                My Orders
+            </p>
+
+            <div class="topbar-right">
+
+                <span class="topbar-label">
+                    Student Printing &amp; Photocopy Ordering System
+                </span>
+
+               <div class="notification-container">
+
+    <button
+        type="button"
+        id="notificationBtn"
+        class="notification-btn"
+        aria-label="Open notifications"
+        aria-expanded="false"
+        aria-controls="notificationPanel"
+    >
+        <span class="notification-icon">🔔</span>
+        <span id="notificationCount" class="notification-count" hidden>0</span>
+    </button>
+
+    <div
+        id="notificationPanel"
+        class="notification-panel"
+        hidden
+    >
+
+        <div class="notification-header">
+            <div>
+                <h3>Notifications</h3>
+                <p>Stay updated with your orders.</p>
+            </div>
+
+            <button
+                type="button"
+                id="markAllReadBtn"
+                class="mark-all-read"
+            >
+                Mark all as read
+            </button>
+        </div>
+
+        <div id="notificationList" class="notification-list">
+            <div class="notification-empty">
+                <span>🔔</span>
+                <strong>No notifications yet</strong>
+                <p>Your order updates will appear here.</p>
+            </div>
+        </div>
+
+        <div class="notification-footer">
+            Project Lavender
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <h1>
+                    Good day, <span id="userName">Student</span>!
+                </h1>
+
+                <p>What would you like today?</p>
+            </div>
+
+            <div class="summary-grid">
+
+                <article class="summary-card">
+                    <img src="MyOrder Icon.png" alt="Orders">
+
+                    <div>
+                        <span>Total Orders</span>
+                        <strong id="totalOrders">0</strong>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <img src="ordering time icon.png" alt="Pending orders">
+
+                    <div>
+                        <span>Pending Orders</span>
+                        <strong id="pendingOrders">0</strong>
+                    </div>
+                </article>
+
+            </div>
+
+            <section class="panel">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>My Recent Orders</h2>
+                        <p>Review your latest printing requests.</p>
+                    </div>
+
+                    <a class="text-link" href="order_status.html">
+                        View order status →
+                    </a>
+
+                </div>
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Select</th>
+                                <th scope="col">Order No.</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Copies</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="recentOrders">
+                            <tr>
+                                <td colspan="5" class="empty-state">
+                                    Loading orders...
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="table-actions">
+                    <button type="button" id="deleteSelectedBtn" class="delete-selected-btn">
+                        Select To Delete
+                    </button>
+                </div>
+
+                <a class="primary-link" href="new_order.html">
+                    + Create New Order
+                </a>
+
+            </section>
+
+        </section>
+
+        <footer class="page-footer">
+            Your campus printing made simpler.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="main.js" defer></script>
+
+</body>
+</html>

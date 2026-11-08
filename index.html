@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E6E0F8">
+
+    <title>Project Lavender - Student Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body class="welcome-body">
+
+    <main class="welcome">
+
+        <header class="welcome-header">
+
+            <div class="welcome-title">
+                <img src="flower lugo for user.png" alt="Project Lavender Logo">
+                <h1>PROJECT LAVENDER</h1>
+            </div>
+
+            <p class="welcomeLogin-subtitle">
+                Student Login
+            </p>
+
+        </header>
+
+        <form id="welcomeForm" class="name-input">
+
+           <label for="username">User Name</label>
+
+<div class="input-box">
+    <img src="Login design lugo.png" alt="">
+
+    <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your Username"
+        autocomplete="username"
+        maxlength="100"
+        required
+    >
+</div>
+
+            <div class="input-group">
+
+                <label for="password">Password</label>
+
+                <div class="input-box input-box_2">
+                    <img src="key login.png" alt="">
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your Password"
+                        autocomplete="current-password"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <button type="submit" class="continue-btn">
+                Login
+            </button>
+
+            <div class="createAccount">
+                <a href="newAccount.html">
+                    NEW USER? Create an Account
+                </a>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script src="main.js" defer></script>
+
+</body>
+</html>

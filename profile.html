@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E6E0F8">
+
+    <title>Project Lavender - Profile</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <a class="brand" href="my_order.html">
+                <img src="flower lugo for user.png" alt="Project Lavender logo">
+
+                <span>
+                    <small>PROJECT</small>
+                    <strong>LAVENDER</strong>
+                </span>
+            </a>
+
+            <nav class="nav-menu" aria-label="Main navigation">
+
+                <a href="my_order.html">
+                    <img src="home icon_2.png" alt="">
+                    Home
+                </a>
+
+                <a href="new_order.html">
+                    <img src="plus sign icon_2.png" alt="">
+                    New Order
+                </a>
+
+                <a href="my_order.html">
+                    <img src="Notes icon_2.png" alt="">
+                    My Orders
+                </a>
+
+                <a href="order_status.html">
+                    <img src="ordering time icon_2.png" alt="">
+                    Order Status
+                </a>
+
+                <a href="profile.html" class="active" aria-current="page">
+                    <img src="Profile icon_2.png" alt="">
+                    Profile
+                </a>
+
+            </nav>
+
+            <div class="student-account">
+
+                <span class="student-avatar" aria-hidden="true">S</span>
+
+                <span>
+                    <strong id="studentName">Student</strong>
+                    <small>Student Account</small>
+                </span>
+
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <header class="topbar">
+
+                <p>
+                    <a href="my_order.html">Home</a>
+                    <span aria-hidden="true"> / </span>
+                    Profile
+                </p>
+
+                <span class="topbar-label">
+                    Student Printing &amp; Photocopy Ordering System
+                </span>
+
+            </header>
+
+            <section class="page-content">
+
+                <div class="page-heading">
+                    <h1>Student Profile</h1>
+                    <p>Manage your account information.</p>
+                </div>
+
+                <section class="panel profile-panel" aria-label="Student profile">
+
+                    <div class="profile-container">
+
+                        <div class="profile-header">
+
+                            <div class="profile-avatar" id="profileAvatar">
+                                S
+                            </div>
+
+                            <h2 id="profileName">Student</h2>
+
+                            <p>Student Account</p>
+
+                        </div>
+
+                        <div class="profile-details">
+
+                            <div class="profile-info">
+                                <span>User Name</span>
+                                <p id="profileUserName">Student</p>
+                            </div>
+
+                            <div class="profile-info">
+                                <span>Full Name</span>
+                                <p id="profileFullName">Student</p>
+                            </div>
+
+                            <div class="profile-info">
+                                <span>Student ID</span>
+                                <p id="profileStudentId">Not registered</p>
+                            </div>
+
+                            <div class="profile-info">
+                                <span>Account Status</span>
+
+                                <p class="account-status">
+                                    <span class="status-dot" id="statusDot"></span>
+                                    <span id="profileAccountStatus">Offline</span>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-actions">
+
+                            <button
+                                type="button"
+                                class="secondary-button"
+                                id="changeName"
+                            >
+                                Change Full Name
+                            </button>
+
+                            <button
+                                type="button"
+                                id="logoutBtn"
+                                class="logout-button"
+                            >
+                                <span>↪</span>
+                                Logout
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <footer class="page-footer">
+                Your campus printing made simpler.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="main.js" defer></script>
+
+</body>
+</html>

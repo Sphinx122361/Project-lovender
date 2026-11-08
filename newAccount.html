@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E6E0F8">
+
+    <title>Project Lavender - Student Registration</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body class="welcome-body">
+
+    <button type="button" id="back-button">back</button>
+
+    <main class="welcome">
+
+        <header class="welcome-header">
+            <p class="welcomeLogin-subtitle">
+                Create Account
+            </p>
+        </header>
+
+        
+
+        <form id="welcomeForm" class="name-input">
+
+    <div class="Register_input-group">
+    <label for="username">User Name</label>
+    <div class="Register_input-box">
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Create a username"
+            autocomplete="username"
+            maxlength="100"
+            required
+        >
+    </div>
+</div>
+
+<div class="Register_input-group">
+    <label for="fullName">Full Name</label>
+    <div class="Register_input-box">
+        <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            maxlength="100"
+            required
+        >
+    </div>
+</div>
+
+<div class="Register_input-group">
+    <label for="studentId">Student ID</label>
+    <div class="Register_input-box">
+        <input
+            type="text"
+            id="studentId"
+            name="studentId"
+            placeholder="Enter your Student ID"
+            maxlength="100"
+            required
+        >
+    </div>
+</div>
+
+    <div class="Register_input-password">
+        <label for="registerPassword">Password</label>
+        <div class="Password">
+            <input
+                type="password"
+                id="registerPassword"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="new-password"
+                minlength="8"
+                maxlength="100"
+                required
+            >
+        </div>
+    </div>
+
+    <div class="Register_input_confirmPassword">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="ConfirmPassword">
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                minlength="8"
+                maxlength="100"
+                required
+            >
+        </div>
+    </div>
+
+    <button type="submit" class="continue-btn">
+        Register
+    </button>
+
+</form>
+
+            
+
+    </main>
+
+    <script src="main.js" defer></script>
+
+</body>
+</html>

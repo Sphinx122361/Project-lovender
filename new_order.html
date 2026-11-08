@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E6E0F8">
+    <title>Project Lavender - New Order</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <a class="brand" href="my_order.html">
+            <img src="flower lugo for user.png" alt="Project Lavender logo">
+            <span>
+                <small>PROJECT</small>
+                <strong>LAVENDER</strong>
+            </span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Main navigation">
+            <a href="my_order.html">
+                <img src="home icon_2.png" alt="">Home
+            </a>
+            <a href="new_order.html" class="active" aria-current="page">
+                <img src="plus sign icon_2.png" alt="">New Order
+            </a>
+            <a href="my_order.html">
+                <img src="Notes icon_2.png" alt="">My Orders
+            </a>
+            <a href="order_status.html">
+                <img src="ordering time icon_2.png" alt="">Order Status
+            </a>
+            <a href="profile.html">
+                <img src="Profile icon_2.png" alt="">Profile
+            </a>
+        </nav>
+
+        <div class="student-account">
+            <span class="student-avatar">S</span>
+            <span>
+                <strong id="studentName">Student</strong>
+                <small>Student Account</small>
+            </span>
+        </div>
+    </aside>
+
+    <main class="main-area">
+
+        <header class="topbar">
+            <p>
+                <a href="my_order.html">Home</a>
+                <span>›</span> New Order
+            </p>
+
+            <span class="topbar-label">
+                Student Printing &amp; Photocopy Ordering System
+            </span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <h1>New Order</h1>
+                <p>Create a printing or photocopy request.</p>
+            </div>
+
+            <section class="panel form-panel">
+
+                <form id="orderForm" class="order-form">
+
+                    <div class="form-field">
+                        <label for="orderType">Order Type</label>
+                        <select id="orderType" name="order_type" required>
+                            <option value="">Select order type</option>
+                            <option value="Printing">Printing</option>
+                            <option value="Photocopy">Photocopy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="paperSize">Paper Size</label>
+                        <select id="paperSize" name="paper_size" required>
+                            <option value="">Select paper size</option>
+                            <option value="Short">Short</option>
+                            <option value="A4">A4</option>
+                            <option value="Long">Long</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="copies">Number of Copies</label>
+                        <input
+                            type="number"
+                            id="copies"
+                            name="copies"
+                            min="1"
+                            max="10000"
+                            step="1"
+                            placeholder="Enter number of copies"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="color">Printing Color</label>
+                        <select id="color" name="color" required>
+                            <option value="">Select color</option>
+                            <option value="Black & White">Black &amp; White</option>
+                            <option value="Colored">Colored</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="file">Upload File</label>
+                        <input
+                            type="file"
+                            id="file"
+                            name="file"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required
+                        >
+                        <small>
+                            Accepted formats: PDF, JPG, JPEG, PNG. Maximum size: 10 MB.
+                        </small>
+                    </div>
+
+                    <div class="form-actions full-width">
+                        <button type="submit" class="primary-button">
+                            Place Order
+                        </button>
+
+                        <p id="orderResult" role="status" aria-live="polite"></p>
+                    </div>
+
+                </form>
+
+            </section>
+        </section>
+
+        <footer class="page-footer">
+            Your campus printing made simpler.
+        </footer>
+
+    </main>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Lavender - Order Status</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <a class="brand" href="my_order.html">
+            <img src="flower lugo for user.png" alt="Project Lavender logo">
+            <span>
+                <small>PROJECT</small>
+                <strong>LAVENDER</strong>
+            </span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Main navigation">
+            <a href="my_order.html">
+                <img src="home icon_2.png" alt="">Home
+            </a>
+            <a href="new_order.html">
+                <img src="plus sign icon_2.png" alt="">New Order
+            </a>
+            <a href="my_order.html">
+                <img src="Notes icon_2.png" alt="">My Orders
+            </a>
+            <a href="order_status.html" class="active">
+                <img src="ordering time icon_2.png" alt="">Order Status
+            </a>
+            <a href="profile.html">
+                <img src="Profile icon_2.png" alt="">Profile
+            </a>
+        </nav>
+
+        <div class="student-account">
+            <span class="student-avatar">S</span>
+            <span>
+                <strong id="studentName">Student</strong>
+                <small>Student Account</small>
+            </span>
+        </div>
+    </aside>
+
+    <main class="main-area">
+
+        <header class="topbar">
+            <p>
+                <a href="my_order.html">Home</a>
+                <span></span> Order Status
+            </p>
+            <span class="topbar-label">
+                Student Printing &amp; Photocopy Ordering System
+            </span>
+
+            <div class="notification-container">
+
+    <button
+        type="button"
+        id="notificationBtn"
+        class="notification-btn"
+        aria-label="Open notifications"
+        aria-expanded="false"
+        aria-controls="notificationPanel"
+    >
+        <span class="notification-icon">🔔</span>
+        <span id="notificationCount" class="notification-count" hidden>0</span>
+    </button>
+
+    <div
+        id="notificationPanel"
+        class="notification-panel"
+        hidden
+    >
+
+        <div class="notification-header">
+            <div>
+                <h3>Notifications</h3>
+                <p>Stay updated with your orders.</p>
+            </div>
+
+            <button
+                type="button"
+                id="markAllReadBtn"
+                class="mark-all-read"
+            >
+                Mark all as read
+            </button>
+        </div>
+
+        <div id="notificationList" class="notification-list">
+            <div class="notification-empty">
+                <span>🔔</span>
+                <strong>No notifications yet</strong>
+                <p>Your order updates will appear here.</p>
+            </div>
+        </div>
+
+        <div class="notification-footer">
+            Project Lavender
+        </div>
+
+    </div>
+
+</div>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <h1>Order Status</h1>
+                <p>Track the progress of your printing and photocopy orders.</p>
+            </div>
+
+            <section class="panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Track an Order</h2>
+                        <p>Enter the order number shown after placing an order.</p>
+                    </div>
+                </div>
+
+                <form id="statusForm" class="status-form">
+                    <label for="orderNumber">Order Number</label>
+
+                    <div class="search-row">
+                        <input
+                            type="text"
+                            id="orderNumber"
+                            placeholder="Example: XANCHIE-123456"
+                            required
+                        >
+                        <button class="primary-button" type="submit">
+                            Check Status
+                        </button>
+                    </div>
+                </form>
+
+                <div
+                    id="statusResult"
+                    class="status-result"
+                    role="status"
+                    aria-live="polite"
+                >
+                    Your order details will appear here.
+                </div>
+
+                <div class="status-steps">
+                    <div class="status-step">
+                        <span>1</span>
+                        <p>Order Submitted</p>
+                    </div>
+                    <div class="status-step">
+                        <span>2</span>
+                        <p>Processing</p>
+                    </div>
+                    <div class="status-step">
+                        <span>3</span>
+                        <p>Ready for Pickup</p>
+                    </div>
+                    <div class="status-step">
+                        <span>4</span>
+                        <p>Completed</p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <footer class="page-footer">
+            Your campus printing made simpler.
+        </footer>
+
+    </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html> 
