@@ -587,6 +587,35 @@ function setUpOrderForm() {
     });
 }
 
+
+
+
+
+function updateStatusSteps(status) {
+    const steps = document.querySelectorAll(".status-step");
+
+    const statusLevels = {
+        "Order Submitted": 1,
+        "Processing": 2,
+        "Ready for Pickup": 3,
+        "Completed": 4
+    };
+
+    const currentStep = statusLevels[status] || 0;
+
+    steps.forEach(step => {
+        const stepNumber = Number(step.dataset.step);
+
+        step.classList.remove("active", "completed");
+
+        if (stepNumber < currentStep) {
+            step.classList.add("completed");
+        } else if (stepNumber === currentStep) {
+            step.classList.add("active");
+        }
+    });
+}
+
 function setUpStatusForm() {
     const form = $("statusForm");
 
@@ -613,8 +642,11 @@ function setUpStatusForm() {
 
             if (!found) {
                 showMessage(result, "No order found with that number.", "fail");
+                updateStatusSteps("");
                 return;
             }
+
+            updateStatusSteps(found.status);
 
             showMessage(
                 result,
@@ -627,9 +659,11 @@ function setUpStatusForm() {
                 `File: ${found.fileName}\n` +
                 `Date: ${new Date(found.createdAt).toLocaleString()}`
             );
+
         } catch (error) {
             console.error("Status check failed:", error);
             showMessage(result, "Unable to check order status.", "fail");
+            updateStatusSteps("");
         }
     });
 }
@@ -660,9 +694,7 @@ function updateProfileDisplay(user) {
 }
 
 function setUpProfile() {
-    const user = getCurrentUser();
-
-    updateProfileDisplay(user);
+    updateStudentName();
 
     const button = $("changeName");
 
@@ -707,7 +739,6 @@ function setUpProfile() {
         saveAccounts(accounts);
         setCurrentUser(currentUser);
 
-        updateProfileDisplay(currentUser);
         updateStudentName();
 
         alert("Your profile has been updated.");
