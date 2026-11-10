@@ -1400,4 +1400,65 @@ td {
 
 
 
+.status-step {
+    position: relative;
+    opacity: 0.45;
+    transition: all 0.3s ease;
+}
+
+.status-step span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: #E6DDED;
+    color: #81758E;
+    border: 2px solid #D8CCE5;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.status-step p {
+    color: #81758E;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.status-step.completed,
+.status-step.active {
+    opacity: 1;
+}
+
+.status-step.completed span {
+    background: #6A4C93;
+    border-color: #6A4C93;
+    color: white;
+}
+
+.status-step.active span {
+    background: #4B3869;
+    border: 3px solid #BCA5DF;
+    color: white;
+    box-shadow: 0 0 0 5px rgba(106, 76, 147, 0.15),
+                0 0 18px rgba(106, 76, 147, 0.45);
+    transform: scale(1.12);
+}
+
+.status-step.completed p,
+.status-step.active p {
+    color: #4B3869;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
 
